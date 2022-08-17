@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+/*font-family: 'Changa One', cursive;*/
+
+
+/* Center the loader */
+.loader {
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	opacity: 1;
+	transition: opacity 3s ease-in;
+
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+
+
+	box-shadow: 0px 0px 100px 00px rgba(0, 0, 0, 0.5);
+	background-size: contain;
+	overflow: hidden;
+
+
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.quote {
+
+
+	display: grid;
+	mix-blend-mode: multiply;
+	text-transform: uppercase;
+	font-family: 'Changa One', cursive;
+	margin: 0;
+	color: #fff;
+	background-color: #000;
+
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 60%;
+	color: #fff;
+	font-size: 4.5vw;
+	text-align: right;
+	transform: translate(0, -50%) scale(1, 1.3);
+	line-height: 0.8;
+
+
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	@media(min-width: 768px) {
+		font-size: 8.2vw;
+	}
+
+	@media(min-width: 1000px) {
+		font-size: 5.2vw;
+	}
+
+	@media(min-width: 1200px) {
+		font-size: 4.3vw;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 200vh;
+		background: rgba(0, 0, 0, 0.96);
+		z-index: -1;
+		transform: translate(0, -50%);
+	}
+
+}
+
+
+.heros {
+	position: relative;
+	background-size: contain;
+	overflow: hidden;
+	width: 700px;
+	box-shadow: 0px 0px 100px 00px rgba(0, 0, 0, 0.5);
+	margin: 50px auto;
+
+
+	@media(min-width: 768px) {
+		width: 60%;
+	}
+
+	@media(min-width: 1000px) {
+		width: 40%;
+	}
+
+}
+
+.loaderimg {
+
+	height: auto;
+	width: 100%;
+	display: block;
+	filter: brightness(3);
+
+	animation-delay: 3s;
+	animation: fadeOutAnim ease 0.5s;
+	animation-duration: 4s;
+
+
+}
+
+@keyframes fadeOutAnim {
+	0% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+
+	80% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+}
+
+
+.product {
+	display: none;
+	opacity: 0;
+	transition: opacity 3s ease-in;
+	text-align: center;
+
+}
+
+.today {
+	color: #46CA83;
+	text-transform: uppercase;
+	font-family: 'Changa One', cursive;
+	font-size: 1.2em;
+	display: inline-block;
+}
+
+.shipping {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Changa One', cursive;
+	font-size: 1.2em;
+	display: inline-block;
+}
+
+.product__text {
+
+	color: #46CA83;
+	text-transform: uppercase;
+	font-family: 'Changa One', cursive;
+	font-size: 0.8em;
+
+}
+
+.price {
+
+	color: #46CA83;
+	text-transform: uppercase;
+	font-family: 'Changa One', cursive;
+	font-size: 1.5em !important;
+
+}
+
+.quantity {
+	margin: 0 auto;
+}
+
+.checked {
+	color: #ffcc00;
+}
+
+
+.product-form__submit {
+
+	box-shadow: 0 0 0 0 rgba(255, 255, 22, .5);
+	animation: pulse 1.5s infinite;
+	-webkit-animation: pulse 1.5s infinite;
+	color: #000;
+	text-transform: uppercase;
+
+	font-size: 1em;
+	animation: none;
+}
+
+.product-form__submit:hover {
+
+	animation: pulse 0.3s infinite ease-out;
+	/* animation configuration */
+}
+
+@keyframes pulse {
+	to {
+		transform: scale(1.01);
+		opacity: 0.7;
+	}
+}
